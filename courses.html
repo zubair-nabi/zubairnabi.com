@@ -7,18 +7,20 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-white text-gray-900 antialiased">
+<body class="bg-black text-white antialiased">
   <!-- back-to-home -->
   <header class="px-6 py-4">
-    <a href="index.html" class="font-semibold hover:underline">&larr;&nbsp;home</a>
+    <a href="index.html" class="text-gray-400 hover:underline">&larr;&nbsp;home</a>
   </header>
 
   <section class="max-w-3xl mx-auto px-6 py-12 space-y-8">
     <!-- course name -->
-    <h1 class="text-4xl sm:text-5xl font-semibold">applied big data systems</h1>
+    <h1 class="text-4xl sm:text-5xl font-semibold tracking-tight">
+      applied big data systems
+    </h1>
 
-    <!-- updated intro -->
-    <p>
+    <!-- intro -->
+    <p class="text-gray-300">
       Everyone wants to plug an LLM into their app, but few know where its training data came from—or how to retrain it responsibly.
       Everyone wants a “magic” ML model, yet most struggle to transform terabytes of raw logs into usable features.
       Knowledge&nbsp;graphs are on every roadmap, but almost nobody knows how to model or populate them at scale.
@@ -26,7 +28,7 @@
       And when it comes to securing data pipelines or turning notebooks into production workflows with repeatable MLOps, even seasoned engineers are guessing.
     </p>
 
-    <p>
+    <p class="text-gray-300">
       <strong>Applied Big Data Systems</strong> closes those gaps.
       Each week we start with a real-world scenario—fraud detection at a fintech, content ranking for a social platform, predictive maintenance in energy—then build an end-to-end solution using the right mix of distributed systems, probabilistic data structures, graph technology, <em>real-time stream processing</em>, governance controls, and production-grade <em>MLOps</em>.
       By the end of the course you will have designed, deployed, and stress-tested industry-grade data products: from data lakes that feed knowledge graphs, to LLM fine-tuning pipelines, to secure streaming inference services.
@@ -35,62 +37,35 @@
 
     <!-- numbered lecture list -->
     <h2 class="text-2xl font-medium mt-10 mb-4">lectures</h2>
-    <ol start="0" class="list-decimal list-inside space-y-2 text-blue-700">
-      <li><a href="https://docs.google.com/presentation/d/1jVdviKlwfaVXi4spZ9gPk7TuyjYAynwC/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Administrivia
-      </a></li>
+    <ol start="0" class="list-decimal list-inside space-y-2">
+      <!-- each link already opens in a new tab -->
+      <li><a href="https://docs.google.com/presentation/d/1jVdviKlwfaVXi4spZ9gPk7TuyjYAynwC/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Administrivia</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/11-KaAIS99NTslVC2mG4n-k9zDSL923eT/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Analyzing Petascale Financial Data · analytics · Hadoop/Spark
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/11-KaAIS99NTslVC2mG4n-k9zDSL923eT/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Analyzing Petascale Financial Data · analytics · Hadoop/Spark</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1_husZCXQI8SYrV80ZaEPaqzU_-KKKMdq/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Storing Petascale Financial Data · warehouses, lakes &amp; meshes
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1_husZCXQI8SYrV80ZaEPaqzU_-KKKMdq/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Storing Petascale Financial Data · warehouses, lakes &amp; meshes</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1sE2hW1Bs7Ox1AQ4_qmiUEooXRoVdyQLV/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Indexing, Searching &amp; Managing Social Media Data · HLLs, inverted indexes
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1sE2hW1Bs7Ox1AQ4_qmiUEooXRoVdyQLV/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Indexing, Searching &amp; Managing Social Media Data · HLLs, inverted indexes</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1SR7hAgUQrg6LdKoaqucOmzcolQ7xAHsP/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Detecting Fraud with Connected Data · graph analytics
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1SR7hAgUQrg6LdKoaqucOmzcolQ7xAHsP/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Detecting Fraud with Connected Data · graph analytics</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1-hHCHLF9SYC_FjiA7Z3_JmNSSlKxypeU/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Making an LLM Smarter · knowledge graphs &amp; GraphRAG
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1-hHCHLF9SYC_FjiA7Z3_JmNSSlKxypeU/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Making an LLM Smarter · knowledge graphs &amp; GraphRAG</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1D9ecICE08GE5FATpMjX-NJBqn7I-h3Ut/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Segmenting E-commerce Users · clustering &amp; dimensionality reduction
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1D9ecICE08GE5FATpMjX-NJBqn7I-h3Ut/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Segmenting E-commerce Users · clustering &amp; dimensionality reduction</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/12s111eNNixlNKlV3snmKTglpbYM6oHoN/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Predicting Customer Churn · feature engineering &amp; hyper-parameter tuning
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/12s111eNNixlNKlV3snmKTglpbYM6oHoN/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Predicting Customer Churn · feature engineering &amp; hyper-parameter tuning</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1hH2Hwg0YGcdQB079qyt5BsDO1_mHNmW9/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Estimating Real Estate Prices · model drift, MLOps
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1hH2Hwg0YGcdQB079qyt5BsDO1_mHNmW9/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Estimating Real Estate Prices · model drift, MLOps</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1LTGH7VFc021K3H-hcaTL3fOXvyS4n1EC/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Forecasting Industrial Machine Failures · time-series · neural nets
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1LTGH7VFc021K3H-hcaTL3fOXvyS4n1EC/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Forecasting Industrial Machine Failures · time-series · neural nets</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1tg4Q-NsdfFQGWuyZW_p8Qgl726CDDc3b/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Democratising Healthcare Analytics · meta-learning &amp; distributed AutoML
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1tg4Q-NsdfFQGWuyZW_p8Qgl726CDDc3b/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Democratising Healthcare Analytics · meta-learning &amp; distributed AutoML</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/19f23ohHiGExoLJrM54wTtyLvH-4r_U96/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Analyzing an Infinite IoT Sensor Datastream · real-time stream processing
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/19f23ohHiGExoLJrM54wTtyLvH-4r_U96/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Analyzing an Infinite IoT Sensor Datastream · real-time stream processing</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/1okT_5QbGezc5LdYqmuus1DDtPDzvY5Bb/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Interpreting World Development Indicators · explainable AI
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/1okT_5QbGezc5LdYqmuus1DDtPDzvY5Bb/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Interpreting World Development Indicators · explainable AI</a></li>
 
-      <li><a href="https://docs.google.com/presentation/d/12LwfDB1iOM09pPskxoQ0T0njm7zLHSDa/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="hover:underline">
-        Analyzing Data in a Chaotic &amp; Unsecure World · privacy-preserving ML
-      </a></li>
+      <li><a href="https://docs.google.com/presentation/d/12LwfDB1iOM09pPskxoQ0T0njm7zLHSDa/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Analyzing Data in a Chaotic &amp; Unsecure World · privacy-preserving ML</a></li>
     </ol>
   </section>
 </body>
