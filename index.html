@@ -2,83 +2,338 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>zubair nabi</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="description" content="zubair nabi · software · data · AI · start-ups · literature · philosophy · music">
+  <meta name="author" content="Zubair Nabi">
+
+  <link rel="canonical" href="https://zubairnabi.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zubairnabi.com/">
+  <meta property="og:title" content="zubair nabi">
+  <meta property="og:description" content="software · data · AI · start-ups · literature · philosophy · music">
+  <meta property="og:image" content="https://zubairnabi.com/portrait.jpg">
+  <meta property="og:image:alt" content="Zubair Nabi">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@ZubairNabi">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23e0402c'/><circle cx='16' cy='16' r='7' fill='%23121212'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Public+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="flex h-screen flex-col items-center justify-center bg-black text-white">
-  <main class="text-center space-y-8">
-    <!-- headline -->
-    <h1 class="font-light text-6xl sm:text-8xl tracking-tight uppercase leading-tight">
-      hungry,<br>foolish
-    </h1>
+<body>
 
-    <!-- name & interests -->
-    <p class="text-sm sm:text-base text-gray-400">
-      zubair nabi · software · data · AI · start-ups · literature · philosophy · music
-    </p>
+<aside class="rail">
+  <a href="#top" class="rail__mark">ZN</a>
+  <nav>
+    <a href="#now" data-short="now">now</a>
+    <a href="#book" data-short="book">the book</a>
+    <a href="#open" data-short="open">in the open</a>
+    <a href="#previously" data-short="prev">previously</a>
+    <a href="#talks" data-short="talks">talks</a>
+    <a href="#teaching" data-short="teach">teaching</a>
+  </nav>
+  <span class="rail__dot"></span>
+</aside>
 
-    <!-- social icons -->
-    <nav class="flex justify-center gap-6">
-      <a href="https://github.com/zubair-nabi" aria-label="GitHub"
-         class="cursor-pointer hover:opacity-80 hover:scale-110 transition-transform"
+<div class="plane" id="top">
+
+  <!-- ===================== hero ===================== -->
+  <section class="hero pad">
+    <div class="hero__kicker rise rise-1">
+      <span class="bl"></span>
+      <span class="mono">zubair nabi</span>
+    </div>
+
+    <h1 class="rise rise-2">hungry,<span class="l2">foolish.</span></h1>
+
+    <div class="grid3 rise rise-3">
+      <div class="cell">
+        <h2>currently</h2>
+        <p>co-founder and cto at
+          <a href="https://kscope.ai/" target="_blank" rel="noopener noreferrer">kscope</a>.</p>
+        <p>berkeley, california.</p>
+      </div>
+      <div class="cell">
+        <h2>interests</h2>
+        <ul>
+          <li>software</li>
+          <li>data</li>
+          <li>AI</li>
+          <li>start-ups</li>
+          <li>literature</li>
+          <li>philosophy</li>
+          <li>music</li>
+        </ul>
+      </div>
+      <div class="cell">
+        <h2>elsewhere</h2>
+        <div class="soc">
+          <a href="https://github.com/zubair-nabi" target="_blank" rel="noopener noreferrer">github</a>
+          <a href="https://www.linkedin.com/in/zubairnabi/" target="_blank" rel="noopener noreferrer">linkedin</a>
+          <a href="https://x.com/ZubairNabi" target="_blank" rel="noopener noreferrer">x</a>
+          <a href="https://medium.com/@zubairnabi" target="_blank" rel="noopener noreferrer">medium</a>
+          <a href="https://scholar.google.com/citations?user=T7Es27kAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">scholar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== now ===================== -->
+  <section class="block pad" id="now">
+    <div class="block__split">
+      <div>
+        <div class="block__head">
+          <span class="block__num">01</span>
+          <div class="block__titles">
+            <h2>now</h2>
+            <p class="deck">what has my attention this year</p>
+          </div>
+        </div>
+        <div class="block__copy reveal">
+      <p>I am co-founder and CTO of
+        <a href="https://kscope.ai/" target="_blank" rel="noopener noreferrer">kscope</a>,
+        building the context layer between enterprise data and the agents that act on it.</p>
+      <p>Two other things have my attention. I am writing
+        <a href="#book">a book</a> called <em>AI is God</em>, on what happens when the decisions
+        that matter most stop being made by humans. And I build
+        <a href="#open">small tools</a> that make public records legible, starting with how long
+        approved housing sits unbuilt in Berkeley.</p>
+      <p>The thread through all three is the same: systems are making consequential decisions
+        faster than anyone can see into them.</p>
+        </div>
+      </div>
+
+      <img class="portrait reveal" src="portrait.jpg" alt="Zubair Nabi"
+           width="558" height="1012" loading="lazy" decoding="async">
+    </div>
+  </section>
+
+  <!-- ===================== the book ===================== -->
+  <section class="block block--red pad" id="book">
+    <div class="block__head">
+      <span class="block__num">02</span>
+      <div class="block__titles">
+        <h2>the book</h2>
+        <p class="deck">an argument about machines and moral language</p>
+      </div>
+    </div>
+    <div class="block__copy reveal">
+      <span class="status">in progress</span>
+      <h3 class="work__title">AI is God</h3>
+
+      <blockquote class="pullquote">
+        What happens when the most important decisions in human history are no longer made by
+        humans?
+      </blockquote>
+
+      <p><em>AI is God</em> explores the collision of artificial intelligence with philosophy,
+        ethics, religion, and law, arguing that our moral language was built for human minds, not
+        machines.</p>
+    </div>
+  </section>
+
+  <!-- ===================== in the open ===================== -->
+  <section class="block block--blue pad" id="open">
+    <div class="block__head">
+      <span class="block__num">03</span>
+      <div class="block__titles">
+        <h2>in the open</h2>
+        <p class="deck">one civic system at a time</p>
+      </div>
+    </div>
+    <div class="block__copy reveal">
+      <p>Public decisions leave public records, and almost nobody can read them. I build small
+        tools that make one civic system legible at a time: housing, education, healthcare.</p>
+    </div>
+    <div class="list reveal">
+      <a class="row" href="https://zubair-nabi.github.io/berkeley-housing-clock/"
          target="_blank" rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-white" viewBox="0 0 24 24">
-          <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577
-                   0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.415-4.042-1.415-.546-1.387-1.333-1.757-1.333-1.757-1.089-.744.084-.729.084-.729
-                   1.205.084 1.84 1.235 1.84 1.235 1.07 1.835 2.809 1.304 3.495.997.108-.776.418-1.304.762-1.604-2.665-.303-5.466-1.333-5.466-5.93
-                   0-1.31.467-2.381 1.235-3.221-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.399 3.003-.404
-                   1.018.005 2.046.138 3.003.404 2.291-1.553 3.298-1.23 3.298-1.23.653 1.653.241 2.873.118 3.176.77.84
-                   1.234 1.911 1.234 3.221 0 4.609-2.803 5.624-5.475 5.921.43.37.823 1.1.823 2.219
-                   0 1.603-.014 2.896-.014 3.286 0 .321.218.694.825.576C20.565 22.092 24 17.592 24 12.297
-                   c0-6.627-5.373-12-12-12"/>
-        </svg>
-      </a>
-
-      <a href="https://www.linkedin.com/in/zubairnabi/" aria-label="LinkedIn"
-         class="cursor-pointer hover:opacity-80 hover:scale-110 transition-transform"
-         target="_blank" rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-white" viewBox="0 0 24 24">
-          <path d="M22.225 0H1.771C.792 0 0 .774 0 1.732v20.535C0 23.225.792 24 1.771 24h20.451C23.2 24 24 23.225 24
-                   22.267V1.732C24 .774 23.2 0 22.225 0zM6.556 20.452H3.116V9h3.44v11.452zM4.837 7.433a1.79 1.79 0 1 1
-                   0-3.58 1.79 1.79 0 0 1 0 3.58zM20.447 20.452h-3.238V14.81c0-1.345-.026-3.077-1.878-3.077-1.878
-                   0-2.165 1.462-2.165 2.973v5.745H9.102V9h3.111v1.561h.044c.433-.82 1.493-1.683
-                   3.071-1.683 3.285 0 3.889 2.164 3.889 4.977v6.597z"/>
-        </svg>
-      </a>
-
-      <a href="https://x.com/ZubairNabi" aria-label="Twitter"
-         class="cursor-pointer hover:opacity-80 hover:scale-110 transition-transform"
-         target="_blank" rel="noopener noreferrer">
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7 fill-white" viewBox="0 0 24 24">
-          <path d="M23.954 4.569c-.885.388-1.83.654-2.825.775 1.014-.611 1.794-1.574
-                   2.163-2.723-.951.564-2.005.974-3.127 1.195-.897-.959-2.178-1.559-3.594-1.559-2.717
-                   0-4.92 2.206-4.92 4.917 0 .39.045.765.127 1.124-4.09-.205-7.72-2.162-10.148-5.144-.424.722-.666
-                   1.561-.666 2.475 0 1.708.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.229-.616v.061c0
-                   2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631
-                   1.953 2.445 3.377 4.6 3.419-1.68 1.318-3.809 2.107-6.102 2.107-.395 0-.779-.023-1.17-.067
-                   2.179 1.394 4.768 2.21 7.557 2.21 9.054 0 14.001-7.496 14.001-13.986
-                   0-.209 0-.423-.015-.637.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/>
-        </svg>
-      </a>
-
-      <a href="https://medium.com/@zubairnabi" aria-label="Medium"
-         class="cursor-pointer hover:opacity-80 hover:scale-110 transition-transform"
-         target="_blank" rel="noopener noreferrer">
-        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/medium.svg"
-             alt="Medium" class="w-7 h-7 invert" />
-      </a>
-    </nav>
-
-    <!-- teaching call-to-action -->
-    <div class="mt-6">
-      <a href="teaching.html"
-         class="inline-block px-5 py-2 border border-white rounded
-                cursor-pointer hover:bg-white hover:text-black transition">
-        Teaching
+        <span class="row__k">housing</span>
+        <span>
+          <span class="row__t">the berkeley housing clock</span>
+          <span class="row__s">berkeley approves housing in about four months, then waits a year or
+            more for anything to be built. built from state hcd reports, city parcel data, zoning
+            board agendas, and ceqa filings.</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
       </a>
     </div>
-  </main>
+  </section>
+
+  <!-- ===================== previously ===================== -->
+  <section class="block block--yellow pad" id="previously">
+    <div class="block__head">
+      <span class="block__num">04</span>
+      <div class="block__titles">
+        <h2>previously</h2>
+        <p class="deck">before kscope</p>
+      </div>
+    </div>
+    <div class="block__copy reveal">
+      <p>Lived, worked, and studied in England, Ireland, Dubai, and Pakistan before Berkeley, by way
+        of an MPhil at the University of Cambridge. Roughly a run through research, consumer apps,
+        and heavy industry. <em>Pro Spark Streaming</em> came out of the research years, and the
+        papers are on
+        <a href="https://scholar.google.com/citations?user=T7Es27kAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">scholar</a>
+        if you want them.</p>
+    </div>
+    <div class="list reveal">
+      <a class="row" href="https://www.themoonshotfactory.com/" target="_blank" rel="noopener noreferrer">
+        <span class="row__k">data · ai · software</span>
+        <span>
+          <span class="row__t">the moonshot factory</span>
+          <span class="row__s">devsecops, enterprise knowledge, and ai over unstructured data</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
+      </a>
+      <a class="row" href="https://www.intechww.com/" target="_blank" rel="noopener noreferrer">
+        <span class="row__k">industrial</span>
+        <span>
+          <span class="row__t">intech automation &amp; intelligence</span>
+          <span class="row__s">engineering and operational technology for the energy industry</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
+      </a>
+      <a class="row" href="https://www.careem.com/" target="_blank" rel="noopener noreferrer">
+        <span class="row__k">consumer</span>
+        <span>
+          <span class="row__t">careem</span>
+          <span class="row__s">the everything app for the middle east and north africa</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
+      </a>
+      <a class="row" href="https://www.coveo.com/en/qubit" target="_blank" rel="noopener noreferrer">
+        <span class="row__k">ecommerce ai</span>
+        <span>
+          <span class="row__t">qubit</span>
+          <span class="row__s">ecommerce personalisation at scale, now part of coveo</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
+      </a>
+      <a class="row" href="https://scholar.google.com/citations?user=T7Es27kAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">
+        <span class="row__k">research</span>
+        <span>
+          <span class="row__t">ibm research</span>
+          <span class="row__s">big data systems and analytics against real problems</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== talks ===================== -->
+  <section class="block pad" id="talks">
+    <div class="block__head">
+      <span class="block__num">05</span>
+      <div class="block__titles">
+        <h2>talks</h2>
+        <p class="deck">a few recent ones, slides open to anyone</p>
+      </div>
+    </div>
+    <div class="block__copy reveal">
+      <p>These circle the same question: what changes when building software stops requiring you to
+        write it.</p>
+    </div>
+    <div class="list reveal">
+      <a class="row" href="https://docs.google.com/presentation/d/1kKRpRAzMIIb2G78lqf-0lO4TJeabHjSl"
+         target="_blank" rel="noopener noreferrer">
+        <span class="row__k">summer 2026</span>
+        <span>
+          <span class="row__t">from prompts to agents</span>
+          <span class="row__s">guest lecture · engin 170e, technology leadership and ai · uc berkeley</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
+      </a>
+      <a class="row" href="https://docs.google.com/presentation/d/1H-HG7JNzhq8NMmWze_hy8EWA8aM74oE-"
+         target="_blank" rel="noopener noreferrer">
+        <span class="row__k">summer 2026</span>
+        <span>
+          <span class="row__t">vibe coding</span>
+          <span class="row__s">guest lecture · engin 170d, technology leadership: entrepreneurship · uc berkeley</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
+      </a>
+      <a class="row" href="https://docs.google.com/presentation/d/1suHxmP3NYIbKHty3qEcDJ8adaH85x_5V"
+         target="_blank" rel="noopener noreferrer">
+        <span class="row__k">workshop</span>
+        <span>
+          <span class="row__t">vibe coding: from thought to construction</span>
+          <span class="row__s">design thinking · uc berkeley extension</span>
+        </span>
+        <span class="row__a" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== teaching ===================== -->
+  <section class="block block--red pad" id="teaching">
+    <div class="block__head">
+      <span class="block__num">06</span>
+      <div class="block__titles">
+        <h2>teaching</h2>
+        <p class="deck">a selection, taught end to end</p>
+      </div>
+    </div>
+    <div class="list reveal">
+      <a class="row" href="teaching.html#applied-big-data">
+        <span class="row__k">course</span>
+        <span class="row__t">applied big data analytics</span>
+        <span class="row__a" aria-hidden="true">→</span>
+      </a>
+      <a class="row" href="teaching.html#advanced-real-world-programming">
+        <span class="row__k">course</span>
+        <span class="row__t">advanced real-world programming</span>
+        <span class="row__a" aria-hidden="true">→</span>
+      </a>
+    </div>
+  </section>
+
+  <div class="base pad mono">
+    <span>zubair nabi</span>
+    <a href="#top">top ↑</a>
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+
+    var revealer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -12% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { revealer.observe(el); });
+
+    var links = {};
+    document.querySelectorAll('.rail nav a[href^="#"]').forEach(function (a) {
+      links[a.getAttribute('href').slice(1)] = a;
+    });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = links[entry.target.id];
+        if (link && entry.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].classList.remove('is-active'); });
+          link.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    document.querySelectorAll('section[id]').forEach(function (s) { spy.observe(s); });
+  })();
+</script>
+
 </body>
 </html>

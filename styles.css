@@ -1,0 +1,399 @@
+/* ==========================================================================
+   zubairnabi.com : concrete
+   Swiss grid meets Bauhaus. Oversized grotesque, primary blocks, heavy
+   rules, nothing decorative.
+   ========================================================================== */
+
+:root{
+  --wall:#f0efea;
+  --slab:#121212;
+  --grey:#6a6a63;
+  --hair:#c9c8c0;
+  --red:#e0402c;
+  --blue:#2547c4;
+  --yellow:#f2c200;
+
+  --disp:"Syne",Helvetica,Arial,sans-serif;
+  --body:"Public Sans",Helvetica,Arial,sans-serif;
+
+  --rail:3.25rem;
+  --pad:clamp(1.25rem,4vw,3.5rem);
+  --measure:min(58ch,100%);
+}
+
+*,*::before,*::after{box-sizing:border-box}
+
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-behavior:smooth;
+  overflow-x:hidden;
+}
+
+body{
+  margin:0;
+  background:var(--wall);
+  color:var(--slab);
+  font-family:var(--body);
+  font-weight:300;
+  font-size:clamp(1rem,.96rem+.2vw,1.06rem);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  overflow-wrap:break-word;
+}
+
+a{color:inherit}
+h1,h2,h3{margin:0;font-family:var(--disp);font-weight:800;line-height:.88;letter-spacing:-.03em}
+p{margin:0 0 1em;max-width:var(--measure)}
+p:last-child{margin-bottom:0}
+
+.mono{
+  font-family:var(--body);font-weight:600;
+  font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;
+}
+
+/* --------------------------------------------------------------------------
+   Rail: vertical nav at desktop, top bar on small screens
+   -------------------------------------------------------------------------- */
+
+.rail{
+  position:fixed;top:0;left:0;bottom:0;width:var(--rail);z-index:40;
+  border-right:2px solid var(--slab);background:var(--wall);
+  display:flex;flex-direction:column;align-items:center;justify-content:space-between;
+  padding:1rem 0;
+}
+.rail__mark{
+  font-family:var(--disp);font-weight:800;font-size:1.05rem;letter-spacing:-.04em;
+  text-decoration:none;
+  writing-mode:horizontal-tb;   /* never inherit the rail's vertical mode */
+  text-orientation:mixed;
+}
+.rail__mark:hover{color:var(--red)}
+.rail nav{display:flex;flex-direction:column;gap:1.6rem;align-items:center}
+.rail nav a{
+  writing-mode:vertical-rl;text-orientation:mixed;text-decoration:none;
+  font-size:.6875rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
+  color:var(--grey);transition:color .18s linear;
+}
+.rail nav a:hover,
+.rail nav a.is-active{color:var(--red)}
+.rail__dot{width:12px;height:12px;background:var(--red);border-radius:50%}
+
+@media(max-width:820px){
+  .rail{
+    right:0;bottom:auto;width:auto;height:3.1rem;flex-direction:row;
+    border-right:0;border-bottom:2px solid var(--slab);padding:0 1rem;
+    justify-content:space-between;
+  }
+  .rail nav{flex-direction:row;gap:1.1rem}
+  .rail nav a{writing-mode:horizontal-tb;letter-spacing:.1em}
+  .rail__dot{display:none}
+}
+/* six full labels overflow a phone bar, so swap in the short forms */
+@media(max-width:620px){
+  .rail nav{gap:.9rem}
+  .rail nav a{font-size:0;letter-spacing:0}
+  .rail nav a::before{
+    content:attr(data-short);
+    font-size:.625rem;letter-spacing:.08em;
+  }
+}
+@media(max-width:400px){
+  .rail nav{gap:.7rem}
+  .rail nav a::before{letter-spacing:.03em}
+}
+/* six rotated labels need more vertical room than a short window has */
+@media(min-width:821px) and (max-height:820px){
+  .rail nav{gap:1rem}
+  .rail nav a{font-size:.625rem;letter-spacing:.12em}
+}
+
+.plane{margin-left:var(--rail)}
+.pad{padding:0 var(--pad)}
+@media(max-width:820px){
+  .plane{margin-left:0;padding-top:3.1rem}
+}
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+.hero{
+  min-height:100svh;display:flex;flex-direction:column;justify-content:center;
+  padding-top:clamp(4rem,8vw,6rem);padding-bottom:clamp(2.5rem,5vw,4rem);
+  overflow:hidden;
+}
+.hero__kicker{display:flex;gap:1.25rem;align-items:center;margin-bottom:clamp(1.5rem,4vw,2.5rem)}
+.hero__kicker .bl{width:2.5rem;height:.8rem;background:var(--blue);flex:none}
+
+.hero h1{
+  /* sized to sit just inside the right edge; .hero clips rather than
+     scrolls, so this stays a deliberate bleed and not a chopped glyph */
+  font-size:clamp(3.4rem,14.5vw,13rem);
+  margin-left:-.055em;
+}
+.hero h1 .l2{display:block;color:var(--red)}
+
+/* three-cell information grid under the headline */
+.grid3{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  border-top:2px solid var(--slab);margin-top:clamp(2rem,5vw,3.5rem);
+}
+.cell{padding:1.5rem 1.5rem 1.5rem 0;border-right:1px solid var(--hair)}
+.cell:last-child{border-right:0}
+.cell h2{
+  font-family:var(--body);font-weight:600;font-size:.6875rem;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--grey);margin-bottom:.9rem;
+}
+.cell p{max-width:32ch}
+.cell a:not(.btn){color:var(--slab);text-decoration:none;border-bottom:2px solid var(--red)}
+.cell a:not(.btn):hover{background:var(--yellow)}
+.cell ul{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:.3rem .8rem}
+.cell ul li{font-size:.85rem;color:var(--grey)}
+.cell .soc{display:flex;flex-direction:column;gap:.45rem;align-items:flex-start}
+.cell .soc a{
+  font-weight:600;font-size:.86rem;width:fit-content;
+  border-bottom:1px solid var(--hair);
+}
+.cell .soc a:hover{border-color:var(--slab);background:var(--yellow)}
+
+/* Portrait left in colour: the mural's geometry is why this photo is here.
+   The file is already cropped, so no object-fit trickery: shown whole, and
+   never rendered wider than its native 558px so it stays sharp. */
+.portrait{display:block;width:100%;height:auto;max-width:18rem}
+
+@media(max-width:820px){
+  .grid3{grid-template-columns:1fr}
+  .cell{border-right:0;border-bottom:1px solid var(--hair);padding-right:0}
+  .cell:last-child{border-bottom:0}
+}
+
+/* --------------------------------------------------------------------------
+   Blocks
+   -------------------------------------------------------------------------- */
+
+/* vertical longhands only: the padding shorthand would override the
+   horizontal padding .pad sets, leaving content flush against the rail */
+.block{
+  border-top:2px solid var(--slab);
+  padding-top:clamp(2.75rem,6vw,4.5rem);
+  padding-bottom:clamp(2.75rem,6vw,4.5rem);
+}
+.block__head{display:flex;align-items:flex-start;gap:clamp(1rem,3vw,2rem);margin-bottom:2rem}
+.block__num{
+  font-family:var(--disp);font-weight:800;font-size:clamp(2.2rem,5vw,3.4rem);
+  line-height:.8;color:var(--wall);background:var(--slab);
+  padding:.2em .3em .1em;flex:none;
+}
+.block--red    .block__num{background:var(--red)}
+.block--blue   .block__num{background:var(--blue)}
+.block--yellow .block__num{background:var(--yellow);color:var(--slab)}
+.block h2{font-size:clamp(2rem,5vw,3.4rem)}
+
+/* deck: a standfirst under the heading, carrying the voice the bare
+   label cannot. Sentence case so it reads as prose, not as a meta label. */
+.block__titles{min-width:0}
+.deck{
+  margin:.75rem 0 0;
+  font-size:.95rem;line-height:1.45;color:var(--grey);
+  max-width:min(46ch,100%);
+}
+
+/* asymmetric block: copy on the left, a tall image in the space to its right */
+.block__split{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,18rem);
+  gap:clamp(1.5rem,4vw,3.5rem);align-items:start;
+}
+@media(max-width:900px){.block__split{grid-template-columns:1fr}}
+
+/* a lead paragraph sitting above a row list */
+.block__copy + .list{margin-top:2.25rem}
+
+/* status marker, e.g. a book still being written */
+.status{
+  display:inline-block;margin-bottom:1.1rem;
+  padding:.32rem .62rem;background:var(--slab);color:var(--wall);
+  font-weight:600;font-size:.625rem;letter-spacing:.16em;text-transform:uppercase;
+}
+.work__title{
+  font-family:var(--disp);font-weight:800;letter-spacing:-.03em;line-height:.95;
+  font-size:clamp(1.7rem,1.3rem+1.8vw,2.6rem);margin:0 0 1.1rem;
+}
+
+.block__copy{max-width:var(--measure);font-size:1.08rem}
+.block__copy p{margin:0 0 1em}
+.block__copy a:not(.btn){color:var(--slab);text-decoration:none;border-bottom:2px solid var(--red)}
+.block__copy a:not(.btn):hover{background:var(--yellow)}
+.block__copy strong{font-weight:600}
+.block__copy em{font-style:italic}
+
+/* --------------------------------------------------------------------------
+   Heavy grid rows
+   -------------------------------------------------------------------------- */
+
+.list{border-top:1px solid var(--hair)}
+.row{
+  display:grid;grid-template-columns:9rem minmax(0,1fr) 2rem;
+  gap:0 clamp(1rem,3vw,2rem);align-items:center;
+  padding:1.15rem 0;border-bottom:1px solid var(--hair);
+  text-decoration:none;transition:background .18s linear,padding .18s linear,color .18s linear;
+}
+.row:hover{background:var(--slab);color:var(--wall);padding-left:1rem;padding-right:1rem}
+.row__k{font-weight:600;font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;color:var(--grey)}
+.row:hover .row__k{color:var(--yellow)}
+.row__t{
+  font-family:var(--disp);font-weight:700;
+  font-size:clamp(1.15rem,1rem+.7vw,1.6rem);letter-spacing:-.02em;
+}
+.row__s{
+  display:block;font-family:var(--body);font-weight:400;font-size:.78rem;
+  letter-spacing:.04em;color:var(--grey);margin-top:.3rem;
+}
+.row:hover .row__s{color:var(--hair)}
+.row__a{justify-self:end;font-weight:600}
+.row.soon .row__t{color:var(--grey)}
+.row.soon:hover .row__t{color:var(--wall)}
+
+@media(max-width:620px){
+  .row{grid-template-columns:minmax(0,1fr) 2rem}
+  .row__k{grid-column:1/-1;padding-bottom:.35rem}
+}
+
+/* --------------------------------------------------------------------------
+   Buttons
+   -------------------------------------------------------------------------- */
+
+.btn{
+  display:inline-block;
+  padding:.85rem 1.4rem;
+  background:var(--slab);color:var(--wall);
+  font-weight:600;font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;
+  text-decoration:none;
+  transition:background .18s linear,color .18s linear;
+}
+.btn:hover{background:var(--red);color:var(--wall)}
+
+/* --------------------------------------------------------------------------
+   Interior page (teaching)
+   -------------------------------------------------------------------------- */
+
+.page-head{
+  padding-top:clamp(4rem,9vw,7rem);
+  padding-bottom:clamp(2rem,5vw,3.5rem);
+}
+/* Syne ExtraBold runs ~0.84em per character, so "teaching." needs to stay
+   under the measure or the full stop wraps and reads as a stray red block */
+.page-head h1{
+  font-size:clamp(2.6rem,11.5vw,9.5rem);margin-left:-.055em;
+}
+.page-head h1 .dot{color:var(--red)}
+
+.back{
+  display:inline-block;margin-bottom:clamp(1.5rem,4vw,2.5rem);
+  font-weight:600;font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;
+  text-decoration:none;color:var(--grey);
+}
+.back:hover{color:var(--red)}
+
+.course{padding:clamp(2.5rem,6vw,4.5rem) 0;border-top:1px solid var(--hair)}
+.course:first-of-type{border-top:0;padding-top:0}
+.course h3{font-size:clamp(1.7rem,1.3rem+2vw,2.9rem);margin-bottom:1.5rem}
+.course__body{max-width:var(--measure)}
+.course__body p{margin:0 0 1em}
+.course__body a:not(.btn){color:var(--slab);text-decoration:none;border-bottom:2px solid var(--red)}
+.course__body a:not(.btn):hover{background:var(--yellow)}
+.course__body strong{font-weight:600}
+.course__body em{font-style:italic}
+
+.subhead{
+  display:flex;align-items:center;gap:1rem;
+  margin:clamp(2.25rem,5vw,3.25rem) 0 .75rem;
+}
+.subhead::after{content:"";flex:1;height:2px;background:var(--slab)}
+
+.pullquote{
+  margin:clamp(2rem,5vw,3rem) 0;
+  padding:0 0 0 clamp(1rem,3vw,1.75rem);
+  border-left:6px solid var(--red);
+  font-family:var(--disp);font-weight:700;
+  font-size:clamp(1.25rem,1.05rem+1vw,1.8rem);line-height:1.22;
+  letter-spacing:-.02em;
+  max-width:min(30ch,100%);
+}
+.pullquote footer{
+  margin-top:.9rem;font-family:var(--body);font-weight:600;
+  font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--grey);
+}
+
+/* numbered lecture / project lists */
+.numbered{list-style:none;margin:0;padding:0;counter-reset:n}
+.numbered li{counter-increment:n}
+.numbered a{
+  display:grid;grid-template-columns:3rem minmax(0,1fr) 2rem;
+  gap:0 clamp(.75rem,2vw,1.5rem);align-items:baseline;
+  padding:.95rem 0;border-bottom:1px solid var(--hair);
+  text-decoration:none;transition:background .18s linear,padding .18s linear,color .18s linear;
+}
+.numbered li:first-child a{border-top:1px solid var(--hair)}
+.numbered a:hover{background:var(--slab);color:var(--wall);padding-left:1rem;padding-right:1rem}
+.numbered a::before{
+  content:counter(n,decimal-leading-zero);
+  font-weight:600;font-size:.6875rem;letter-spacing:.1em;color:var(--grey);
+}
+.numbered a:hover::before{color:var(--yellow)}
+.numbered a::after{
+  content:"↗";font-weight:600;justify-self:end;color:var(--hair);
+}
+.numbered a:hover::after{color:var(--wall)}
+.numbered .t{font-weight:400;line-height:1.4}
+.numbered .t em{
+  display:block;font-style:normal;font-weight:600;
+  font-size:.6875rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--grey);margin-top:.3rem;
+}
+.numbered a:hover .t em{color:var(--hair)}
+
+@media(max-width:560px){
+  .numbered a{grid-template-columns:2.25rem minmax(0,1fr) 1.25rem}
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+
+.base{
+  border-top:2px solid var(--slab);
+  padding-top:1.5rem;padding-bottom:2.5rem;
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:1rem;
+}
+.base a{text-decoration:none}
+.base a:hover{color:var(--red)}
+
+/* --------------------------------------------------------------------------
+   Motion
+   -------------------------------------------------------------------------- */
+
+.reveal{
+  opacity:0;transform:translateY(14px);
+  transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1);
+}
+.reveal.in{opacity:1;transform:none}
+
+.rise{opacity:0;transform:translateY(14px);animation:rise .8s cubic-bezier(.22,1,.36,1) forwards}
+.rise-1{animation-delay:.04s}
+.rise-2{animation-delay:.14s}
+.rise-3{animation-delay:.26s}
+@keyframes rise{to{opacity:1;transform:none}}
+
+::selection{background:var(--yellow);color:var(--slab)}
+:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+  }
+  .rise,.reveal{opacity:1;transform:none}
+}

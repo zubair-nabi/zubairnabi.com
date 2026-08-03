@@ -2,143 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>teaching | zubair nabi</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>teaching · zubair nabi</title>
+  <meta name="description" content="courses and workshops · applied big data analytics · advanced real-world programming · vibe coding">
+
+  <link rel="canonical" href="https://zubairnabi.com/teaching.html">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://zubairnabi.com/teaching.html">
+  <meta property="og:title" content="teaching · zubair nabi">
+  <meta property="og:description" content="courses and workshops · applied big data analytics · advanced real-world programming · vibe coding">
+  <meta property="og:image" content="https://zubairnabi.com/portrait.jpg">
+  <meta property="og:image:alt" content="Zubair Nabi">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:creator" content="@ZubairNabi">
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23e0402c'/><circle cx='16' cy='16' r='7' fill='%23121212'/></svg>">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Public+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="bg-black text-white antialiased">
-  <!-- back-to-home -->
-  <header class="px-6 py-4">
-    <a href="index.html" class="text-gray-400 hover:underline">&larr;&nbsp;home</a>
-  </header>
+<body>
 
-  <section class="max-w-3xl mx-auto px-6 py-12 space-y-8">
-    <!-- academic courses -->
-    <h1 id="academic-courses" class="text-4xl sm:text-5xl font-semibold tracking-tight mb-8">
-      academic courses
-    </h1>
+<aside class="rail">
+  <a href="index.html" class="rail__mark">ZN</a>
+  <nav>
+    <a href="#applied-big-data" data-short="data">big data</a>
+    <a href="#advanced-real-world-programming" data-short="code">programming</a>
+  </nav>
+  <span class="rail__dot"></span>
+</aside>
 
-    <h2 class="text-2xl font-medium mb-6 text-gray-400">
-      existing courses
-    </h2>
+<div class="plane" id="top">
 
-    <!-- applied big data analytics course -->
-    <h2 id="applied-big-data" class="text-3xl font-medium mb-6">
-      applied big data analytics
-    </h2>
-
-    <!-- intro -->
-    <p class="text-gray-300">
-      Everyone wants to plug an LLM into their app, but few know where its training data came from—or how to retrain it responsibly.
-      Everyone wants a "magic" ML model, yet most struggle to transform terabytes of raw logs into usable features.
-      Knowledge&nbsp;graphs are on every roadmap, but almost nobody knows how to model or populate them at scale.
-      Everyone craves real-time dashboards, but wiring stream processors that scale globally is non-trivial.
-      And when it comes to securing data pipelines or turning notebooks into production workflows with repeatable MLOps, even seasoned engineers are guessing.
-    </p>
-
-    <p class="text-gray-300">
-      <strong>Applied Big Data Analytics</strong> closes those gaps.
-      Each week we start with a real-world scenario—fraud detection at a fintech, content ranking for a social platform, predictive maintenance in energy—then build an end-to-end solution using the right mix of distributed systems, probabilistic data structures, graph technology, <em>real-time stream processing</em>, governance controls, and production-grade <em>MLOps</em>.
-      By the end of the course you will have designed, deployed, and stress-tested industry-grade data products: from data lakes that feed knowledge graphs, to LLM fine-tuning pipelines, to secure streaming inference services.
-      You'll leave not just knowing the buzzwords, but having <em>built</em> the systems behind them.
-    </p>
-
-    <!-- lectures -->
-    <h3 class="text-xl font-medium mt-10 mb-4">lectures</h3>
-    <ol start="0" class="list-decimal list-inside space-y-2">
-      <li><a href="https://docs.google.com/presentation/d/1jVdviKlwfaVXi4spZ9gPk7TuyjYAynwC/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Administrivia</a></li>
-      <li><a href="https://docs.google.com/presentation/d/11-KaAIS99NTslVC2mG4n-k9zDSL923eT/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Analyzing Petascale Financial Data · analytics · Hadoop/Spark</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1_husZCXQI8SYrV80ZaEPaqzU_-KKKMdq/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Storing Petascale Financial Data · warehouses, lakes &amp; meshes</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1sE2hW1Bs7Ox1AQ4_qmiUEooXRoVdyQLV/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Indexing, Searching &amp; Managing Social Media Data · HLLs, inverted indexes</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1SR7hAgUQrg6LdKoaqucOmzcolQ7xAHsP/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Detecting Fraud with Connected Data · graph analytics</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1-hHCHLF9SYC_FjiA7Z3_JmNSSlKxypeU/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Making an LLM Smarter · knowledge graphs &amp; GraphRAG</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1D9ecICE08GE5FATpMjX-NJBqn7I-h3Ut/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Segmenting E-commerce Users · clustering &amp; dimensionality reduction</a></li>
-      <li><a href="https://docs.google.com/presentation/d/12s111eNNixlNKlV3snmKTglpbYM6oHoN/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Predicting Customer Churn · feature engineering &amp; hyper-parameter tuning</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1hH2Hwg0YGcdQB079qyt5BsDO1_mHNmW9/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Estimating Real Estate Prices · model drift, MLOps</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1LTGH7VFc021K3H-hcaTL3fOXvyS4n1EC/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Forecasting Industrial Machine Failures · time-series · neural nets</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1tg4Q-NsdfFQGWuyZW_p8Qgl726CDDc3b/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Democratising Healthcare Analytics · meta-learning &amp; distributed AutoML</a></li>
-      <li><a href="https://docs.google.com/presentation/d/19f23ohHiGExoLJrM54wTtyLvH-4r_U96/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Analyzing an Infinite IoT Sensor Datastream · real-time stream processing</a></li>
-      <li><a href="https://docs.google.com/presentation/d/1okT_5QbGezc5LdYqmuus1DDtPDzvY5Bb/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Interpreting World Development Indicators · explainable AI</a></li>
-      <li><a href="https://docs.google.com/presentation/d/12LwfDB1iOM09pPskxoQ0T0njm7zLHSDa/edit?usp=sharing" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Analyzing Data in a Chaotic &amp; Unsecure World · privacy-preserving ML</a></li>
-    </ol>
-
-    <!-- projects -->
-    <h3 class="text-xl font-medium mt-12 mb-4">projects</h3>
-    <ol class="list-decimal list-inside space-y-2">
-      <li><a href="https://docs.google.com/document/d/1RYOejQwSxnKJX_IIzEseZxQAkuPwPQ4M/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Loan Performance Data Insights</a></li>
-      <li><a href="https://docs.google.com/document/d/1qweYXazahUIIJ7gveDqfn3kYr2IaQXmU/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">SEC Corporate Filings Insights</a></li>
-      <li><a href="https://docs.google.com/document/d/1XGYbJibiMt9s_7SJ9DeJnmTW-KsT6CFj/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">NYC Taxi Trip Insights</a></li>
-      <li><a href="https://docs.google.com/document/d/1-bpfQw_rlfHUfWkQyWwmPYfMuy931SpU/edit?usp=sharing&ouid=115686932443554238260&rtpof=true&sd=true" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">NYISO Electricity Consumption &amp; Pricing Insights</a></li>
-    </ol>
-
-    <!-- advanced real-world programming course -->
-    <h2 id="advanced-real-world-programming" class="text-3xl font-medium mb-6 mt-16">
-      advanced real-world programming
-    </h2>
-
-    <p class="text-gray-300">
-      We have come a long way since the time when it was generally believed that computers themselves would never constitute a scientific field of study, to a time where Computer Science has pervaded and made an impact on nearly all aspects of human life. The "smartness" of computers has enabled us to explore the surface of mars, map the human genome, discover malignant cancer cells, and even discover the "God particle", ad infinitum. At the same time, it is important to remember that a computer by itself is a "dumb" device which needs to be "programmed" to perform actions and tasks.
-    </p>
-
-    <p class="text-gray-300">
-      With all of this in mind, this course has been designed to teach students "to think like a computer scientist". Through a general-purpose programming language, Python, students will be introduced to multiple programming paradigms, including functional, imperative, and object-oriented, with a strong emphasis on writing clean, efficient (both in space and time), and bug-free code. Taking a hands-on approach, we will discuss and analyze how all of these methodologies can be mapped onto real-world problems and algorithms and students will be expected to get their hands dirty. Importantly, rather than getting into the nitty-gritty of these paradigms, this course aims to equip the students with the right skills and tools to venture out into the real world and make an impact in their respective domains.
-    </p>
-
-    <blockquote class="border-l-4 border-gray-600 pl-4 italic text-gray-300 my-6">
-      "The computing scientist's main challenge is not to get confused by the complexities of his own making."
-      <footer class="text-gray-400 mt-2">— E. W. Dijkstra</footer>
-    </blockquote>
-
-    <p class="text-gray-300">
-      <a href="https://sites.google.com/site/arwpspring13/advanced-real-world-programming" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Course Material</a>
-    </p>
-
-    <h2 class="text-2xl font-medium mt-16 mb-6 text-gray-400">
-      courses on the anvil
-    </h2>
-
-    <h2 id="vibe-coding" class="text-3xl font-medium mb-4">
-      vibe coding
-    </h2>
-
-    <p class="text-gray-300">
-      Turn plain-language ideas into production-ready software. Dive into sharp prompt tricks, model fine-tuning, and seamless DevOps flows that let AI generate, refactor, and harden sprawling codebases. Stress-test everything with rigorous suites, lock down security, and squeeze out every millisecond of performance—so the code your model writes is truly enterprise-grade. Walk away ready to vibe-code complex systems from concept to deploy.
-    </p>
-
-    <!-- workshops -->
-    <h1 id="workshops" class="text-4xl sm:text-5xl font-semibold tracking-tight mt-16 mb-8">
-      workshops
-    </h1>
-
-    <h2 id="vibe-coding-workshop" class="text-3xl font-medium mb-4">
-      vibe coding: from thought to construction
-    </h2>
-
-    <p class="text-gray-300">
-      There are about 8 billion people in the world.<br>
-      Roughly 30 million can write software.<br>
-      More than 1.5 billion can speak English.
-    </p>
-
-    <p class="text-gray-300">
-      For decades, the digital economy has been gated by the second number.
-      Vibe coding asks what happens when the third gets to build too.
-    </p>
-
-    <h3 class="text-xl font-medium mt-10 mb-4">what this workshop is about</h3>
-
-    <p class="text-gray-300">
-      Vibe coding is a way of building software by describing intent, setting constraints, and iterating through conversation. Instead of translating ideas into code first, it allows ideas to become executable early and to be shaped through use rather than speculation.
-    </p>
-
-    <p class="text-gray-300">
-      This session treats language not as documentation, but as a construction medium.
-    </p>
-
-    <p class="text-gray-300 mt-6">
-      <a href="https://docs.google.com/presentation/d/1suHxmP3NYIbKHty3qEcDJ8adaH85x_5V" class="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">Workshop Slides</a>
-    </p>
+  <section class="page-head pad">
+    <a href="index.html" class="back rise rise-1">← home</a>
+    <h1 class="rise rise-2">teaching<span class="dot">.</span></h1>
   </section>
+
+  <!-- ===================== courses ===================== -->
+  <section class="block pad" id="courses">
+    <div class="block__head">
+      <span class="block__num">01</span>
+      <div class="block__titles">
+        <h2>academic courses</h2>
+        <p class="deck">lectures, projects, and the grading that comes with them</p>
+      </div>
+    </div>
+
+    <div class="reveal">
+
+      <!-- ---------- applied big data analytics ---------- -->
+      <article class="course" id="applied-big-data">
+        <h3>applied big data analytics</h3>
+
+        <div class="course__body">
+          <p>
+            Everyone wants to plug an LLM into their app, but few know where its training data came
+            from, or how to retrain it responsibly. Everyone wants a "magic" ML model, yet most
+            struggle to transform terabytes of raw logs into usable features.
+            Knowledge&nbsp;graphs are on every roadmap, but almost nobody knows how to model or
+            populate them at scale. Everyone craves real-time dashboards, but wiring stream
+            processors that scale globally is non-trivial. And when it comes to securing data
+            pipelines or turning notebooks into production workflows with repeatable MLOps, even
+            seasoned engineers are guessing.
+          </p>
+          <p>
+            <strong>Applied Big Data Analytics</strong> closes those gaps. Each week we start with a
+            real-world scenario (fraud detection at a fintech, content ranking for a social
+            platform, predictive maintenance in energy) then build an end-to-end solution using the
+            right mix of distributed systems, probabilistic data structures, graph technology,
+            <em>real-time stream processing</em>, governance controls, and production-grade
+            <em>MLOps</em>. By the end of the course you will have designed, deployed, and
+            stress-tested industry-grade data products: from data lakes that feed knowledge graphs,
+            to LLM fine-tuning pipelines, to secure streaming inference services. You'll leave not
+            just knowing the buzzwords, but having <em>built</em> the systems behind them.
+          </p>
+        </div>
+
+        <div class="subhead"><span class="mono">lectures</span></div>
+        <ol class="numbered">
+          <li><a href="https://docs.google.com/presentation/d/1jVdviKlwfaVXi4spZ9gPk7TuyjYAynwC/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Administrivia</span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/11-KaAIS99NTslVC2mG4n-k9zDSL923eT/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Analyzing Petascale Financial Data<em>analytics · Hadoop / Spark</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1_husZCXQI8SYrV80ZaEPaqzU_-KKKMdq/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Storing Petascale Financial Data<em>warehouses, lakes &amp; meshes</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1sE2hW1Bs7Ox1AQ4_qmiUEooXRoVdyQLV/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Indexing, Searching &amp; Managing Social Media Data<em>HLLs · inverted indexes</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1SR7hAgUQrg6LdKoaqucOmzcolQ7xAHsP/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Detecting Fraud with Connected Data<em>graph analytics</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1-hHCHLF9SYC_FjiA7Z3_JmNSSlKxypeU/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Making an LLM Smarter<em>knowledge graphs &amp; GraphRAG</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1D9ecICE08GE5FATpMjX-NJBqn7I-h3Ut/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Segmenting E-commerce Users<em>clustering &amp; dimensionality reduction</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/12s111eNNixlNKlV3snmKTglpbYM6oHoN/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Predicting Customer Churn<em>feature engineering &amp; hyper-parameter tuning</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1hH2Hwg0YGcdQB079qyt5BsDO1_mHNmW9/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Estimating Real Estate Prices<em>model drift · MLOps</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1LTGH7VFc021K3H-hcaTL3fOXvyS4n1EC/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Forecasting Industrial Machine Failures<em>time-series · neural nets</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1tg4Q-NsdfFQGWuyZW_p8Qgl726CDDc3b/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Democratising Healthcare Analytics<em>meta-learning &amp; distributed AutoML</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/19f23ohHiGExoLJrM54wTtyLvH-4r_U96/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Analyzing an Infinite IoT Sensor Datastream<em>real-time stream processing</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/1okT_5QbGezc5LdYqmuus1DDtPDzvY5Bb/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Interpreting World Development Indicators<em>explainable AI</em></span></a></li>
+          <li><a href="https://docs.google.com/presentation/d/12LwfDB1iOM09pPskxoQ0T0njm7zLHSDa/edit?usp=sharing" target="_blank" rel="noopener noreferrer"><span class="t">Analyzing Data in a Chaotic &amp; Unsecure World<em>privacy-preserving ML</em></span></a></li>
+        </ol>
+
+        <div class="subhead"><span class="mono">projects</span></div>
+        <ol class="numbered">
+          <li><a href="https://docs.google.com/document/d/1RYOejQwSxnKJX_IIzEseZxQAkuPwPQ4M/edit?usp=sharing&amp;ouid=115686932443554238260&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer"><span class="t">Loan Performance Data Insights</span></a></li>
+          <li><a href="https://docs.google.com/document/d/1qweYXazahUIIJ7gveDqfn3kYr2IaQXmU/edit?usp=sharing&amp;ouid=115686932443554238260&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer"><span class="t">SEC Corporate Filings Insights</span></a></li>
+          <li><a href="https://docs.google.com/document/d/1XGYbJibiMt9s_7SJ9DeJnmTW-KsT6CFj/edit?usp=sharing&amp;ouid=115686932443554238260&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer"><span class="t">NYC Taxi Trip Insights</span></a></li>
+          <li><a href="https://docs.google.com/document/d/1-bpfQw_rlfHUfWkQyWwmPYfMuy931SpU/edit?usp=sharing&amp;ouid=115686932443554238260&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener noreferrer"><span class="t">NYISO Electricity Consumption &amp; Pricing Insights</span></a></li>
+        </ol>
+      </article>
+
+      <!-- ---------- advanced real-world programming ---------- -->
+      <article class="course" id="advanced-real-world-programming">
+        <h3>advanced real-world programming</h3>
+
+        <div class="course__body">
+          <p>
+            We have come a long way since the time when it was generally believed that computers
+            themselves would never constitute a scientific field of study, to a time where Computer
+            Science has pervaded and made an impact on nearly all aspects of human life. The
+            "smartness" of computers has enabled us to explore the surface of mars, map the human
+            genome, discover malignant cancer cells, and even discover the "God particle", ad
+            infinitum. At the same time, it is important to remember that a computer by itself is a
+            "dumb" device which needs to be "programmed" to perform actions and tasks.
+          </p>
+
+          <p>
+            With all of this in mind, this course has been designed to teach students "to think like
+            a computer scientist". Through a general-purpose programming language, Python, students
+            will be introduced to multiple programming paradigms, including functional, imperative,
+            and object-oriented, with a strong emphasis on writing clean, efficient (both in space
+            and time), and bug-free code. Taking a hands-on approach, we will discuss and analyze
+            how all of these methodologies can be mapped onto real-world problems and algorithms and
+            students will be expected to get their hands dirty. Importantly, rather than getting
+            into the nitty-gritty of these paradigms, this course aims to equip the students with
+            the right skills and tools to venture out into the real world and make an impact in
+            their respective domains.
+          </p>
+
+          <blockquote class="pullquote">
+            "The computing scientist's main challenge is not to get confused by the complexities of
+            his own making."
+            <footer>E. W. Dijkstra</footer>
+          </blockquote>
+
+          <p style="margin-top:2rem">
+            <a href="https://sites.google.com/site/arwpspring13/advanced-real-world-programming" class="btn" target="_blank" rel="noopener noreferrer">course material ↗</a>
+          </p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+
+
+  <div class="base pad mono">
+    <span>zubair nabi</span>
+    <a href="index.html">← home</a>
+  </div>
+
+</div>
+
+<script>
+  (function () {
+    if (!('IntersectionObserver' in window)) {
+      document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      return;
+    }
+
+    var revealer = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          revealer.unobserve(entry.target);
+        }
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { revealer.observe(el); });
+
+    var links = {};
+    document.querySelectorAll('.rail nav a[href^="#"]').forEach(function (a) {
+      links[a.getAttribute('href').slice(1)] = a;
+    });
+    var spy = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        var link = links[entry.target.id];
+        if (link && entry.isIntersecting) {
+          Object.keys(links).forEach(function (k) { links[k].classList.remove('is-active'); });
+          link.classList.add('is-active');
+        }
+      });
+    }, { rootMargin: '-40% 0px -55% 0px' });
+    document.querySelectorAll('section[id]').forEach(function (s) { spy.observe(s); });
+  })();
+</script>
+
 </body>
 </html>
